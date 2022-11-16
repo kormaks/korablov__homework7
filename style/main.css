@@ -314,11 +314,11 @@ ul {
         margin-bottom: 66px;
     }
     .logo_ul{
-        gap: 41px 127px;
-        justify-content: space-evenly;
-    }
-    .flex-wrap{
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        justify-items: center;
+        row-gap: 25px;
     }
     .team-inbox{
         text-align: center;
@@ -413,13 +413,6 @@ ul {
     .conteiner{
         max-width: 500px;
     }
-    .logo_ul{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,1fr);
-        gap: 30px 0;
-        justify-items: center;
-    }
     .logo__section{
         padding-bottom: 50px;
     }
@@ -500,6 +493,10 @@ ul {
     .logo__text{
         display: none;
     }
+    .logo_ul{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
     .question__wrapper{
         max-width: 290px;
     }
@@ -532,33 +529,11 @@ ul {
         max-width: 290px;
     }
     .logo_ul{
-        gap: 0;
+        gap: 10px;
+        text-align: center;
     }
     .logo__icon{
-        max-width: 80px;
-    }
-    .logo__li{
-        position: relative;
-    }
-    .logo__li:nth-child(2)::after{
-        content: '';
-        right: -12px;
-        top: -48px;
-        width: 1px;
-        height: 9rem;
-        background:grey;
-        position: absolute;
-        opacity: 0.2;
-    }
-    .logo__li:nth-child(2)::before{
-        content: '';
-        left: -10px;
-        top: -48px;
-        width: 1px;
-        height: 9rem;
-        background:grey;
-        position: absolute;
-        opacity: 0.2;
+        max-width: 80%;
     }
     .img{
         margin-bottom: 32px;
