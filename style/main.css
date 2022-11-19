@@ -83,12 +83,36 @@ ul {
     font-size: 18px;
     line-height: 13px;
     color: #FFFFFF;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 1e-05) 100%), #3040C4;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 1e-05) 100%), rgb(48, 64, 196);
     background-blend-mode: overlay, normal;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
     border-radius: 2px;
     padding: 17px 28px;
+    position: relative;
     cursor: pointer;
+    transition: all 500ms cubic-bezier(0.645, 0.000, 1.000, 1.000);
+}
+button:hover::before{
+    content: '';
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    border-radius:50%;
+    transform: translate(-50%,-50%);
+    background-color:#FFFFFF;
+    color: #3040C4;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    animation-name: toFill;
+    animation-duration: 1.75s;
+    transition: all 500ms cubic-bezier(0.645, 0.000, 1.000, 1.000);
+}
+.button:hover{
+    background-color:#FFFFFF;
+    color: #3040C4;
+    transition: all 500ms cubic-bezier(0.645, 0.000, 1.000, 1.000);
+    transition-duration: 1s;
 }
 .question {
     padding: 77px 0;
@@ -208,6 +232,29 @@ ul {
 .reverse {
     color: #3040C4;
     background: #FFFFFF;
+}
+.reverse:hover::before{
+    content: '';
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    border-radius:50%;
+    transform: translate(-50%,-50%);
+    background-color:#3040C4;
+    color:#FFFFFF;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    animation-name: toFill;
+    animation-duration: 1.75s;
+    transition: all 500ms cubic-bezier(0.645, 0.000, 1.000, 1.000);
+}
+.reverse:hover{
+    background-color:#3040C4;
+    color:#FFFFFF;
+    transition: all 500ms cubic-bezier(0.645, 0.000, 1.000, 1.000);
+    transition-duration: 1s;
+
 }
 .grid{
     display: grid;
@@ -579,5 +626,25 @@ ul {
     .galery__text{
         font-size: 24px;
         line-height: 34px;
+    }
+}
+@keyframes toFill {
+    0%{
+        width: 0;
+        opacity: 1;
+    }
+    25%{
+        width: 38.5px;
+    }
+    50%{
+        width: 76.5px;
+    }
+    75%{
+        width: 115px;
+        border-radius:25%;
+    }
+    100%{
+        width: 153px;
+        border-radius: 2px;
     }
 }
