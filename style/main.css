@@ -339,6 +339,8 @@ button:hover::before{
 }
 .form__flex{
     align-items: start;
+    justify-content: center;
+    gap: 122px;
 }
 .form__icon{
     width: 270px;
@@ -737,12 +739,8 @@ button:hover::before{
         margin-bottom: 32px;
         animation-name: toSkew;
         animation-duration:1.5s;
-        transition:     transition: all 500ms cubic-bezier(0.645, 0.000, 1.000, 1.000);
+        transition:all 500ms cubic-bezier(0.645, 0.000, 1.000, 1.000);
         animation-iteration-count:infinite;
-    }
-    }
-    .img__icon{
-        max-width: 290px;
     }
     .img:hover{
         transform: rotate(45deg);
@@ -798,7 +796,6 @@ button:hover::before{
         text-align: left;
         max-width: 290px;
     }
-
 }
 @keyframes toFill {
     0%{
