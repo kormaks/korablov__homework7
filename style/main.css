@@ -143,6 +143,47 @@ button:hover::before{
     background-color: rgba(252, 240, 227, .4);
     padding: 117px 0 116px;
 }
+.img:hover{
+    animation-name: toSkew;
+    animation-duration:750ms;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+@keyframes toSkew {
+    0%{
+        transform:scale(0.1,1);
+    }
+    10%{
+        transform: scale(0.2,1);
+    }
+    20%{
+        transform: scale(0.3,1);
+    }
+    30%{
+        transform: scale(0.4,1);
+    }
+    40%{
+        transform: scale(0.5,1);
+    }
+    50%{
+        transform: scale(0.6,1);
+    }
+    60%{
+        transform: scale(0.7,1);
+    }
+    70%{
+        transform: scale(0.8,1);
+    }
+    80%{
+        transform: scale(0.9,1);
+    }
+    90%{
+        transform: scale(1,1);
+    }
+    100%{
+        transform: scale(1.1,1);
+    }
+}
 .center__content{
     max-width: 555px;
     width: 100%;
@@ -474,7 +515,7 @@ button:hover::before{
         max-width: 429px;
         margin: 0 auto 41px;
         font-size: 20px;
-    line-height: 26px;
+        line-height: 26px;
     }
     .team-inbox__comment{
         text-align: start;
@@ -527,11 +568,6 @@ button:hover::before{
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(4,1fr);
         gap:29px 45px;
-    }
-    .galery__img{
-        animation-name: toCircle;
-        animation-duration:1.5s;
-        animation-iteration-count: infinite;
     }
     .galery__img:nth-child(3){
         grid-column: 2/3;
@@ -841,42 +877,5 @@ button:hover::before{
     100%{
         width: 153px;
         border-radius: 2px;
-    }
-}
-@keyframes toSkew {
-    0%{
-        transform: skew(4.5deg);
-        width: 100%;
-    }
-    10%{
-        transform: skew(9deg);
-    }
-    20%{
-        transform: skew(13.5deg);
-    }
-    30%{
-        transform: skew(18deg);
-    }
-    40%{
-        transform: skew(22.5deg);
-    }
-    50%{
-        transform: skew(27deg);
-    }
-    60%{
-        transform: skew(31.5deg);
-    }
-    70%{
-        transform: skew(35deg);
-    }
-    80%{
-        transform: skew(40.5deg);
-    }
-    90%{
-        transform: skew(42deg);
-    }
-    100%{
-        transform: skew(45deg);
-        width: 150%;
     }
 }
