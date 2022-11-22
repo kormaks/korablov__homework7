@@ -28,20 +28,44 @@
                         <p class="logo__text">Startup landing template</p>
                     </div>
                 </div>
-                <nav class="header__nav flex display-none">
-                    <ul class="header__ul flex">
-                        <li class="header__li">
-                            <a href="#" class="header__link">Home</a>
-                        </li>
-                        <li class="header__li">
-                            <a href="#" class="header__link">Stories</a>
-                        </li>
-                    </ul>
-                    <button class="button">Get Started</button>
-                </nav>
+                <div class="menu flex__menu">
+                    <input checked class="menu__checkbox" type="checkbox" >
+                    <div class="check__wrapper">
+                        <div class="check"></div>
+                        <div class="check"></div>
+                        <div class="check"></div>
+                    </div>
+                    <nav class="header__nav flex display-none">
+                        <ul class="header__ul flex flex__menu">
+                            <li class="header__li">
+                                <a href="#" class="header__link">Home</a>
+                            </li>
+                            <li class="header__li">
+                                <a href="#" class="header__link">Stories</a>
+                            </li>
+                        </ul>
+                        <button class="button">Get Started</button>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
+    <section class="build">
+        <div class="conteiner flex direction-column">
+            <div class="build__content">
+                <h1 class="build__content__title">Build stunning websites & apps.</h1>
+                <p class="build__content__text">Create live segments and target the right people for messages based
+                    on their behaviors.</p>
+                <div class="button__wrapper flex__button">
+                    <button class="button">Get Started</button>
+                    <button class="button reverse">Learn More</button>
+                </div>
+            </div>
+            <div class="build__img">
+                <img class="build__icon" src="./img/build/build__img.jpg" alt="">
+            </div>
+        </div>
+    </section>
     <section class="question">
         <div class="conteiner flex direction-column">
             <div class="question__wrapper">
@@ -229,6 +253,56 @@
             </div>
         </div>
     </section>
+    <footer class="footer">
+        <div class="conteiner ">
+            <ul class="footer__ul flex flex__li direction-column">
+                <li class="footer__li">
+                    <div class="logo flex footer__flex">
+                        <div class="logo_img footer__img">
+                            <img src="./img/footer/reverse__img.svg" alt="Logo">
+                        </div>
+                        <div>
+                            <h6 class="logo__title footer__title">Foundation</h6>
+                            <p class="logo__text footer__text">Startup landing template</p>
+                        </div>
+                    </div>
+                    <p class="footer__li__text">Foundation is a website template for startups and small teams. It helps
+                        to build a website in no time.</p>
+                    <div class="flex link__wrapper">
+                        <a href="#"><img src="./img/footer/AppStore.png" alt="icon"></a>
+                        <a href="#"><img src="./img/footer/Google Play.png" alt="icon"></a>
+                    </div>
+                </li>
+                <ul>
+                    <li class="footer__li__title">Product</li>
+                    <li class="footer__li"><a href="#" class="footer__link">Acquire Users</a></li>
+                    <li class="footer__li"><a href="#" class="footer__link">Content Marketing</a></li>
+                    <li class="footer__li"><a href="#" class="footer__link">Website Templates</a></li>
+                    <li class="footer__li"><a href="#" class="footer__link">Customer Management</a></li>
+                    <li class="footer__li"><a href="#" class="footer__link">Virtual Inbox</a></li>
+                </ul>
+                <ul>
+                    <li class="footer__li__title">Company</li>
+                    <li class="footer__li"><a href="#" class="footer__link">About Foundation</a></li>
+                    <li class="footer__li"><a href="#" class="footer__link">Brand Guidelines</a></li>
+                    <li class="footer__li"><a href="#" class="footer__link">Press Kit</a></li>
+                    <li class="footer__li"><a href="#" class="footer__link">Support</a></li>
+                </ul>
+                <div class="terms flex direction-column">
+                    <div class="terms__wrapper">
+                        <a href="#" class="terms__link">Terms</a>
+                        <a href="#" class="terms__link">Privacy</a>
+                        <a href="#" class="terms__link">License</a>
+                    </div>
+                    <div class="terms__wrapper">
+                        <a href="#" class="terms__link"><img src="./img/footer/icon-twitter.png" alt="twitter"></a>
+                        <a href="#" class="terms__link"><img src="./img/footer/icon-fb.png" alt="facebook"></a>
+                        <a href="#" class="terms__link"><img src="./img/footer/LinkedIn.png" alt="instagram"></a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 </html>

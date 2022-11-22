@@ -2,7 +2,7 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 
-ul {
+ul ,link {
     text-decoration: none;
 }
 
@@ -44,7 +44,18 @@ ul {
     color: #2B292D99;
     opacity: 0.6;
 }
-
+.check{
+    width: 30px;
+    height: 3px;
+    background-color: grey;
+    border-radius:3px;
+}
+.check:not(:last-of-type){
+    margin-bottom: 5px;
+}
+.check__wrapper ,.menu__checkbox{
+    display: none;
+}
 .header__link {
     text-decoration: none;
     font-size: 18px;
@@ -113,6 +124,38 @@ button:hover::before{
     color: #3040C4;
     transition: all 500ms cubic-bezier(0.645, 0.000, 1.000, 1.000);
     transition-duration: 750ms;
+}
+.build {
+    background-color: #F3C6BD;
+    padding-bottom: 77px;
+    position: relative;
+}
+.build__content{
+    position: relative;
+    z-index: 1;
+}
+.build__content__title {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 78px;
+    letter-spacing: -0.5px;
+    color: #2B292D;
+    max-width: 754px;
+    margin-bottom: 34px;
+}
+
+.build__content__text {
+    font-size: 24px;
+    line-height: 34px;
+    color: #2B292D;
+    margin-bottom: 58px;
+    max-width: 456px;
+}
+
+.build__img {
+    position: absolute;
+    right: 25px;
+    top: 0;
 }
 .question {
     padding: 77px 0;
@@ -463,6 +506,55 @@ button:hover::before{
 .checkbox:checked ~ .fake::before{
     opacity: 1;
 }
+.footer{
+    padding: 134px 0 47px;
+    position: relative;
+}
+.footer__ul{
+    margin-bottom: 47px;
+}
+.flex__li{
+    align-items: start;
+}
+.footer__li{
+    max-width: 360px;
+}
+.footer__flex{
+    padding: 0;
+    margin-bottom: 26px;
+    justify-content: start;
+}
+.footer__text{
+    display: block;
+}
+.footer__li__text{
+    font-size: 18px;
+    line-height: 26px;
+    color: rgba(43, 41, 45, 0.6);
+    margin-bottom: 25px;
+}
+.footer__li__title{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    color: #2B292D;
+    margin-bottom: 18px;
+}
+.footer__link{
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 30px;
+    color: rgba(43, 41, 45, 0.6);
+}
+.terms__link{
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(43, 41, 45, 0.6);
+}
+.terms__link:not(:last-of-type){
+    margin-right: 20px;
+}
 @media screen and (max-width:1090px) {
     .conteiner{
         max-width: 750px;
@@ -470,6 +562,9 @@ button:hover::before{
     }
     .display-none{
         display: none;
+    }
+    .button{
+        position: static;
     }
     .header{
         padding: 31px 0 25px;
@@ -479,6 +574,94 @@ button:hover::before{
     }
     .direction_team-inbox{
         flex-direction: column-reverse;
+    }
+    .check__wrapper ,.menu__checkbox{
+        display: block;
+    }
+    .menu{
+        position: relative;
+    }
+    .menu__checkbox{
+        position: absolute;
+        z-index: 10;
+        margin: 0;
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+        top: -5px;
+        right: 0;
+    }
+    .check{
+        transition: 300ms ease;
+    }
+    .menu__checkbox:checked ~ .check__wrapper > .check:first-of-type{
+        transform: rotate(45deg) translate(6px, 7px);
+    }
+    .menu__checkbox:checked ~ .check__wrapper > .check:nth-child(2){
+        display: none;
+    }
+    .menu__checkbox:checked ~ .check__wrapper > .check:last-of-type{
+        transform: rotate(-45deg) translate(-1px, 1px);
+    }
+    .menu__checkbox:checked ~ .header__nav{
+        position: fixed;
+        display: block;
+        background-color:#f2b6aa;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        padding-top: 40px;
+    }
+    .check__wrapper{
+        position: relative;
+        z-index: 1;
+    }
+    .header__li:not(:first-of-type) {
+        margin: 0px;
+    }
+    .header__li:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+    .flex__menu{
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+    .build{
+        padding: 0;
+        text-align: left;
+        position: static;
+    }
+    .build__content{
+        margin: 0 auto 0 0;
+        position: static;
+        z-index: 0;
+    }
+    .build__content__title{
+        font-size: 60px;
+        line-height: 72px;
+        letter-spacing: -0.5px;
+        max-width: 525px;
+        margin-bottom: 15px;
+    }
+    .build__content__text{
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 40px;
+    }
+    .button__wrapper > button{
+        width: 123px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 13px;
+        padding: 0;
+    }
+    .build__img{
+        position: static;
+    }
+    .build__icon{
+        width: 690px;
     }
     .question{
         padding: 30px 0 34px;
@@ -629,6 +812,52 @@ button:hover::before{
         text-align: left;
         
     }
+    .footer{
+        padding: 49px 0;
+        position: static;
+    }
+    .footer__flex{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer__text{
+        display: block;
+    }
+    .footer__ul{
+        margin: 0 auto;
+        max-width: 343px;
+    }
+    .footer__img{
+        margin: 0 auto;
+        margin-bottom: 33px;
+    }
+    .footer__title{
+        font-size: 24px;
+        line-height: 25px;
+    }
+    .footer__text{
+        font-size: 24px;
+        line-height: 25px;
+    }
+    .footer__li__text{
+        display: none;
+    }
+    .link__wrapper{
+        margin-bottom: 32px;
+    }
+    .footer__ul > ul:nth-child(2){
+        margin-bottom: 25px;
+    }
+    .terms{
+        align-items: start;
+    }
+    .footer__ul > ul:nth-child(3){
+        margin-bottom: 38px;
+    }
+    .terms__wrapper:not(:last-of-type){
+        margin-bottom: 28px;
+    }
 }
 @media screen and (max-width:800px){
     .conteiner{
@@ -636,6 +865,9 @@ button:hover::before{
     }
     .logo__section{
         padding-bottom: 50px;
+    }
+    .flex__menu {
+        margin-bottom: 15px;
     }
     .engage-visitors__ul{
         grid-template-columns: 1fr;
@@ -679,6 +911,9 @@ button:hover::before{
 @media screen and (max-width:550px) {
     .conteiner{
         max-width: 430px;
+    }
+    .build__icon{
+        width: 430px;
     }
     .img__icon{
         max-width: 400px;
@@ -733,12 +968,21 @@ button:hover::before{
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(3,1fr);
     }
+    .build{
+        padding: 36px 0;
+    }
+    .build__content{
+        margin-bottom: 25px;
+    }
     .question__wrapper{
         max-width: 290px;
     }
     .team-inbox{
         text-align: left;
         padding: 50px 0;
+    }
+    .img__icon{
+        max-width: 290px;
     }
     .pretitle{
         margin: 0 0 17px;
@@ -771,15 +1015,35 @@ button:hover::before{
     .logo__icon{
         max-width: 80%;
     }
+    .build__content{
+        max-width: 290px;
+        margin-bottom: 33px;
+    }
+    .build__content__title{
+        font-size: 50px;
+        line-height: 50px;
+        letter-spacing: -0.3125px;
+        margin-bottom: 24px;
+    }
+    .build__content__text{
+        font-size: 24px;
+        line-height: 34px;
+        margin-bottom: 30px;
+    }
+    .flex__button{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .button__wrapper > .button{
+        width: 100%;
+    }
+    .build__icon{
+        max-width: 290px;
+        height: 180px;
+    }
     .img{
         margin-bottom: 32px;
-        animation-name: toSkew;
-        animation-duration:1.5s;
-        transition:all 500ms cubic-bezier(0.645, 0.000, 1.000, 1.000);
-        animation-iteration-count:infinite;
-    }
-    .img:hover{
-        transform: rotate(45deg);
     }
     .direction_team-inbox{
         flex-direction: column;
@@ -831,6 +1095,33 @@ button:hover::before{
     .form__content{
         text-align: left;
         max-width: 290px;
+    }
+    .footer{
+        padding: 40px 0 23px;
+    }
+    .footer__ul{
+        max-width: 290px;
+        align-items: inherit;
+    }
+    .logo_img{
+        margin: 0 auto;
+    }
+    .footer__title{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .footer__text{
+        display: block;
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .footer__li__title{
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .footer__li{
+        font-size: 18px;
+        line-height: 30px;
     }
 }
 @keyframes toFill {
