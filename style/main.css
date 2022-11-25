@@ -533,6 +533,10 @@ button:hover::before{
     color: rgba(43, 41, 45, 0.6);
     margin-bottom: 25px;
 }
+.link__wrapper{
+    column-gap: 10px;
+    justify-content: start;
+}
 .footer__li__title{
     font-weight: 700;
     font-size: 22px;
@@ -830,7 +834,6 @@ button:hover::before{
         max-width: 343px;
     }
     .footer__img{
-        margin: 0 auto;
         margin-bottom: 33px;
     }
     .footer__title{
@@ -975,6 +978,10 @@ button:hover::before{
     .build__content{
         margin-bottom: 25px;
     }
+    .build__icon{
+        max-width: 290px;
+        height: 180px;
+    }
     .question__wrapper{
         max-width: 290px;
     }
@@ -1038,10 +1045,6 @@ button:hover::before{
     }
     .button__wrapper > .button{
         width: 100%;
-    }
-    .build__icon{
-        max-width: 290px;
-        height: 180px;
     }
     .img{
         margin-bottom: 32px;
